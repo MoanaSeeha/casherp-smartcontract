@@ -1,0 +1,62 @@
+Let me explain to you how CashP and Cashier correlates.
+
+CashP is the staking token.
+
+People will be able to stake their CashP by using or not using any referral link. (Referral link for staking should be generated) and should be optional for use. People can choose to use staking referral link or choose to just stake without any link.
+
+Anyone can stake as little as 0.1 CashP.
+
+Whatsoever you stake, you can't get your initial capital back. You will only be able to be claiming 2% daily ROI. 
+
+Any staking will pay a daily ROI of 2% for 180days making 360%.
+
+There should be a 2.5% referral commission on staking. (If anyone uses someone referral link, that person will get a 2.5% staking referral commission)
+
+this is staking
+
+Referral Program
+
+Casher is the referral Program token.
+
+For you to be able to participate in the referral Program, you will need to stake a minimum of 10 CashP.
+
+Once you have CashP in your staking account, you need to buy and hold casher.
+
+Once you have Casher in your wallet, you need to look for an influence wallet address (referral link) to participate in the referral Program.
+
+The referral Program have 15 levels. These levels determine the amount of casher you need to have in your wallet. 
+
+In Level 1, you need 2 Casher
+
+L2  = 3 Casher 
+L3 = 5 Casher
+L4 = 8 Casher  
+L5 = 13 Casher
+L6 = 21 Casher
+L7 = 34 Casher
+L8 = 55 Casher
+L9 = 89 Casher
+L10 = 144 Casher
+L11 = 233 Casher
+L12 = 377 Casher
+L13 = 610 Casher
+L14 = 987 Casher
+L15 = 1597 Casher
+
+The  amount of casher you hold in your wallet will automatically rank you to a higher Level.
+
+But for you to be able to participate in referral Program, you need to stake a minimum of 10 CashP.
+
+
+Referral Program (Airdrop)
+
+The reason why people buy Casher to join the referral Program is so that their upline (Leader do some Airdrop for them)
+
+Take for example: 
+If you stake 10 CashP and then  you have 2Casher, you will be able to join someone who is already in the referral Program (Team building). Now the reason you are join the person is because you believe that he will do some Airdrop of CashP for you.
+
+An influencer (upline) can use this Referral Program (Airdrop) to distribute some CashP to their downlines.
+
+Let's say: 
+An influencer can choose to Airdrop 5Cashp to people in Lv3.
+The system will scan and bring out the list of the people in Lv3.
