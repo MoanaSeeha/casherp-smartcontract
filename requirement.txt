@@ -1,17 +1,11 @@
 Let me explain to you how CashP and Cashier correlates.
 
 CashP is the staking token.
-
 People will be able to stake their CashP by using or not using any referral link. (Referral link for staking should be generated) and should be optional for use. People can choose to use staking referral link or choose to just stake without any link.
-
 Anyone can stake as little as 0.1 CashP.
-
 Whatsoever you stake, you can't get your initial capital back. You will only be able to be claiming 2% daily ROI. 
-
 Any staking will pay a daily ROI of 2% for 180days making 360%.
-
 There should be a 2.5% referral commission on staking. (If anyone uses someone referral link, that person will get a 2.5% staking referral commission)
-
 this is staking
 
 Referral Program
