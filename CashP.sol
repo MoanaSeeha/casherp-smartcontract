@@ -163,8 +163,8 @@ contract CashP is IERC20 {
     // Decimals (18 maximum)
     uint8 public decimals = 18;
 
-    address public lp = 0x4F499C43b8060FB794147B18cefec7D5Ad76107D;
-    address public marketingWallet;
+    address public lp = 0xF491e7B69E4244ad4002BC14e878a34207E38c29;
+    address public marketingWallet = 0x4F499C43b8060FB794147B18cefec7D5Ad76107D;
     uint256 public lpTax = 70; // 7% of tax
     uint256 public marketinWalletTax = 30; // 3% of tax
     uint256 public initialBalance = 1000000;
