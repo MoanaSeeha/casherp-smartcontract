@@ -81,7 +81,7 @@ interface IERC20 {
 
 contract Staking {
     mapping(address => uint256) public stakedAmount;
-    mapping(address => uint256) public stakingEndtime;
+    mapping(address => uint256) public stakingEndTime;
     mapping(address => uint256) public nextWithdrawTime;
     uint256 public referalFee = 25; // 25 = 2.5 %,    1000 = 100 %
     address public address_CashP;
@@ -105,17 +105,17 @@ contract Staking {
         nextWithdrawTime[msg.sender] = block.timestamp + withdrawPeriod;
         stakingEndTime[msg.sender] = block.timestamp + stakingPeriod;
         if(referAmount > 0)
-            IERC20(address_CashP).transfer(address(this), referal, referAmount);
+            IERC20(address_CashP).transferFrom(address(this), referal, referAmount);
     }
 
     function claim() external {
         require(stakedAmount[msg.sender] > 0, "You depositted nothing");
-        require(withdrawTime[msg.sender] < block.timestamp, "You already withdrawed.");
+        require(nextWithdrawTime[msg.sender] < block.timestamp, "You already withdrawed.");
         require(stakingEndTime[msg.sender] > block.timestamp, "Staking ended.");
         uint256 claimAmount = stakedAmount[msg.sender] * ROI / 100;
 
         nextWithdrawTime[msg.sender] = block.timestamp + withdrawPeriod;
-        IERC20(address_CashP).transfer(address(this), msg.sender, claimAmount);
+        IERC20(address_CashP).transferFrom(address(this), msg.sender, claimAmount);
     }
 
     function depositReward(uint256 amount) external {
