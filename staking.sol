@@ -87,6 +87,8 @@ contract Staking {
     address public address_CashP;
     uint256 public stakingPeriod = 180 days;
     uint256 public withdrawPeriod = 1 days;
+    address public marketingAddress;
+    uint256 public depositFee = 100; // 10 %, 1000 = 100%
 
     uint256 public ROI = 2; // 2 %
     constructor() {
@@ -106,6 +108,8 @@ contract Staking {
         stakingEndTime[msg.sender] = block.timestamp + stakingPeriod;
         if(referAmount > 0)
             IERC20(address_CashP).transferFrom(address(this), referal, referAmount);
+
+        IERC20(address_CashP).tansfer(address(this), marketingAddress, amount * depositFee / 1000);
     }
 
     function claim() external {
@@ -115,7 +119,16 @@ contract Staking {
         uint256 claimAmount = stakedAmount[msg.sender] * ROI / 100;
 
         nextWithdrawTime[msg.sender] = block.timestamp + withdrawPeriod;
-        IERC20(address_CashP).transferFrom(address(this), msg.sender, claimAmount);
+
+        uint256 totalDepositAmount = IERC20(address_CashP).balanceOf(address(this));
+        uint256 feePercent = claimAmount * 100 / totalDepositAmount;
+        if(feePercent > 10)
+            feePercent = 10;
+        uint256 feeAmount = feePercent * 5 * claimAmount / 100;
+
+        uint256 transferAmount = claimAmount - feeAmount;
+        IERC20(address_CashP).transfer(msg.sender, transferAmount);
+        IERC20(address_CashP).transfer(marketingAddress, feeAmount);
     }
 
     function depositReward(uint256 amount) external {
